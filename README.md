@@ -1,4 +1,5 @@
-# A simple Rock paper Scissor game coded using python
+# Rock paper Scissors game
+## A simple Rock paper Scissor game coded using python
 
 #### What it does ?
 - A simple text-based Rock paper Scissor game coded using python 
