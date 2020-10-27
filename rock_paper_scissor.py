@@ -1,4 +1,5 @@
 import random
+
 print('ROCK , PAPER , SCISSORS !!!')
 print('')
 name=input('Enter your name:')
@@ -12,10 +13,12 @@ Total no.of rounds:5
 Best of 5 wins the game''')
 print('')
 print('Ready to go... 3,2,1')
+
 p_count=0
 c_count=0
 #round=0
 choice='yes'
+#flag=False
 while choice=='yes':
      
      for i in range(1,6):
@@ -23,6 +26,7 @@ while choice=='yes':
          print('ROUND:',i)
          print('')
          player=input("rock,paper,scissor????")
+         
          if player=='rock' or player=='paper' or player=='scissor':
              computer=random.choice(['rock','paper','scissor'])
              print('computer:',computer)
@@ -68,15 +72,19 @@ while choice=='yes':
           
              print('')
              print('')
+         
          else:
-             print('check your spelling!') 
-             break
+             print('Round skipped due to incorrect spelling! Be careful with your spelling!') 
+           #  flag=True
+     #print(p_count,c_count)       
      if p_count>c_count:
          print('FINAL SCORE:')
          print(name,':',p_count,'computer:',c_count)
          print('YAY!!! YOU WON') 
-     elif p_count==c_count:
+     elif p_count==c_count and c_count!=0 and p_count!=0:
          print('Thats a TIE !')
+     elif p_count==0 and c_count==0:
+         print("You lost due to Incorrect Spellings")
      else:
          print('FINAL SCORE:')
          print(name,':',p_count,'computer:',c_count)
